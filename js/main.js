@@ -1,4 +1,5 @@
-const logo=document.getElementById("navbarLogo")
+const logoEl=document.getElementById("navbarLogo")
+const brollEl=document.querySelector(".background-video")
 
 const logos = [
   "Columbus_LogoLockUpRev_Blue_RGB.png",
@@ -10,18 +11,41 @@ const logos = [
   "Columbus_LogoLockUpRev_Yellow_RGB.png",
 ]
 
-let currentLogo=null
+const brolls=[
+	"ExperienceColumbus_Day3_Drone1_Sub_006.mp4",
+	"ExperienceColumbus_Day3_Drone1_Sub_007 (1).mp4",
+	"ExperienceColumbus_Day3_Drone1_Sub_041.mp4",
+]
 
-function randomizeLogo(){
-	let randomIndex=Math.floor(Math.random()*logos.length)
-	while (randomIndex==currentLogo){
-		randomIndex=Math.floor(Math.random()*logos.length)
-		if (randomIndex!=currentLogo){
+let currentLogo=null
+let currentBroll=null
+
+function randomizeIndex(currentIndex,stuff){
+	let randomIndex=Math.floor(Math.random()*stuff.length)
+	while (randomIndex==currentIndex){
+		randomIndex=Math.floor(Math.random()*stuff.length)
+		if (randomIndex!=currentIndex){
 			break
 		}
 	}
-	currentLogo=randomIndex
-	logo.src="../assets/logos/"+logos[randomIndex]
+	return randomIndex
 }
-randomizeLogo()
-setInterval(randomizeLogo,1500)
+
+function randomLogo(){
+	const logo=randomizeIndex(currentLogo,logos)
+	currentLogo=randomizeIndex
+	logoEl.src="../assets/logos/"+logos[logo]
+}
+
+function randomBroll(){
+	const broll=randomizeIndex(currentBroll,brolls)
+	currentBroll=randomizeIndex
+	document.querySelector(".video-source").src="../assets/b-roll/"+brolls[broll]
+}
+
+setInterval(randomLogo,1500)
+
+//brollEl.onended=function hi(){
+//	console.log("hi")
+//	randomBroll()
+//}
