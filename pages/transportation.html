@@ -1,10 +1,54 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
+	<link rel="stylesheet" href="../css/home.css">
+	<meta charset="utf-8">
+	<title>Columbus</title>
 </head>
 
 <body>
+	<video autoplay muted loop playsinline class="background-video">
+    	<source src="../assets/b-roll/ExperienceColumbus_Day3_Drone1_Sub_006.mp4" type="video/mp4" class="video-source">
+  	</video>
+	<nav class="navbar">
+      <div class="navbar_wrapper">
+            <div class="navbar_logo">
+                <a href="./index.html" rel="noopener noreferrer">
+  				<img id="navbarLogo" src="../assets/logos/Columbus_LogoLockUpRev_Blue_RGB.png" alt="columbus logo" height = "60px" width = "360px">
+				</a>
+            </div> 
+            <ul class="navbar_menu_container">
+				<li class="navbar_link">
+					<a href="./transportation.html" class="navbar_link_item">Transportation</a>
+				</li>
+				<li class="navbar_link">
+					<a href="./attraction.html" class="navbar_link_item">Attractions</a>
+				</li>                 
+				<li class="navbar_link">
+					<a href="./careers.html" class="navbar_link_item">Careers</a>
+				</li> 
+				<li class="navbar_link">
+					<a href="./edu.html" class="navbar_link_item">Education</a>
+				</li> 
+				<li class="navbar_link navbar_link--ada">
+					<a href="" class="navbar_link_item">ADA</a> <!--popup-->
+				</li> 
+			</ul>
+        </div>
+    </nav>
+	
+	<main class="hero">
+        <div class="hero_wrapper">
+			<h1>Inbound flights to Columbus John Glenn (CMH)</h1>
+			<div class="flight_wrapper">
+				<button id="xhr">send request</button>
+				<ul id="flights">
+					
+				</ul>
+			</div>
+		</div>
+    </main>
+	<script src="../js/main.js"></script>
+	<script src="../js/BUS.js"></script>
 </body>
 </html>
