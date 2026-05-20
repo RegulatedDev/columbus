@@ -5,6 +5,8 @@ const url="https://api.aviationstack.com/v1/"
 
 let xhr=new XMLHttpRequest()
 
+
+
 xhr.onload=function(){
 	if(xhr.status===200){
 		const response=JSON.parse(xhr.responseText)
