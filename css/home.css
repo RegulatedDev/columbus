@@ -144,12 +144,15 @@ footer {
 .flight_stuff {
     display: flex;
     flex-direction: column;
+    margin: auto;
+    max-width: 800px; /* or whatever width you want */
+    width: 100%;
 }
 
 .flight_light{
 	display: flex;
 	background: linear-gradient(130deg, #1f2937 10%, #111827 100%);
-	width: 45rem;
+	width: 100%;
 	align-self: center;
 	justify-content: center;
 }
