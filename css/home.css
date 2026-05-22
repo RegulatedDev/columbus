@@ -181,8 +181,22 @@ footer {
     gap: 4rem;
 }
 
-.footer_links h1,
+.footer_item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.footer_links h1{
+	color: white;
+}
 .footer_links a {
     color: white;
 	text-decoration: none;
+}
+
+.footer_links a:hover {
+    color: lightblue;
+	text-decoration: none;
+	transition: all .3s ease-in-out;
 }
