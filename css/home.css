@@ -48,7 +48,7 @@ footer {
 
 .navbar {
     height: 6rem;
-
+	margin-top: 1rem;
     display: flex;
     align-items: center;
 }

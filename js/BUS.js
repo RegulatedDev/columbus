@@ -1,5 +1,6 @@
 const button=document.getElementById("xhr")
 const flights=document.getElementById("flights")
+const flights_section=document.querySelector(".flight_light")
 
 const url="https://api.aviationstack.com/v1/"
 
@@ -9,6 +10,7 @@ let xhr=new XMLHttpRequest()
 
 xhr.onload=function(){
 	if(xhr.status===200){
+		flights_section.style.display="flex"
 		const response=JSON.parse(xhr.responseText)
 		response.data.forEach(flight=>{
 			const li=document.createElement("li")
