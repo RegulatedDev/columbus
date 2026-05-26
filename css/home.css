@@ -155,6 +155,7 @@ footer {
 	width: 100%;
 	align-self: center;
 	justify-content: center;
+	border-radius: 1rem;
 }
 
 .flight_light li{
